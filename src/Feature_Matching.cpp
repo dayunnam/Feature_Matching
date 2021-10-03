@@ -42,7 +42,7 @@ int main(int argc, char* argv[])
 	if (parser.has("show")) {
 		show_result = parser.get<bool>("show");
 	}
-	
+
 	string out_f = parser.has("o") ? parser.get<String>("o") : ".";
 
 	Mat img0 = imread(parser.get<String>("b"), IMREAD_ANYCOLOR | IMREAD_ANYDEPTH); // base image
@@ -141,7 +141,7 @@ int main(int argc, char* argv[])
 	std::cout << "\t# inliers : " << inlier_num << std::endl;
 	std::cout << "\tCorrect match rate : " << static_cast<float>(inlier_num) / static_cast<float>(matches.size())*100.0 << "%" << std::endl;
 
-	cout << "\tH: \n\t" << H.at<double>(0, 0) << " " << H.at<double>(0, 1) << " " << H.at<double>(0, 2) << std::endl;
+	cout << "\tHomography matrix: \n\t" << H.at<double>(0, 0) << " " << H.at<double>(0, 1) << " " << H.at<double>(0, 2) << std::endl;
 	cout << "\t" << H.at<double>(1, 0) << " " << H.at<double>(1, 1) << " " << H.at<double>(1, 2) << std::endl;
 	cout << "\t" << H.at<double>(2, 0) << " " << H.at<double>(2, 1) << " " << H.at<double>(2, 2) << std::endl;
 
