@@ -25,5 +25,3 @@ add_executable( Feature_Matching
 target_include_directories(Feature_Matching PRIVATE ${OpenCV_INCLUDE_DIR})
 target_link_libraries( Feature_Matching ${OpenCV_LIBS} )
 set_target_properties(Feature_Matching PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
-add_subdirectory( examples )
-
