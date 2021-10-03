@@ -1,11 +1,7 @@
 
-cmake_minimum_required( VERSION 2.6 )
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
+cmake_minimum_required(VERSION 3.3)
 
-if (NOT CMAKE_BUILD_TYPE)
-	message(STATUS "No build type selected, default to Release")
-        set(CMAKE_BUILD_TYPE "Release" CACHE STRING "build type" FORCE)
-endif()
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} [OpenCV.cmake PATH])
 
 
 project( Feature_Matching )
